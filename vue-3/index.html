@@ -42,7 +42,7 @@
   <h1>Hello, Vue :)</h1>
 
   <div id="app">
-    <p>{{ filteredBooks }}</p>
+    <p>{{ filteredBooks }} - {{ new Date().getHours() }}</p>
     <div v-if="showBooks">
       <ul>
         <li v-for="book in books" @click="toggleFav(book)" :class="{ fav: book.isFav }">
