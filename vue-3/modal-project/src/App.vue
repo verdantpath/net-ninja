@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <div v-if="showModal">  
+  <teleport to=".modals" v-if="showModal">  
     <Modal theme="sale" @close="toggleModal">
       <h1>Ninja Giveaway</h1>
       <p>Grab your ninja swag for half price!</p>
@@ -9,7 +9,7 @@
         <a href="#">more info</a>
       </template>
     </Modal>
-  </div>
+  </teleport>
   <p>welcome</p>
   <button @click="toggleModal">open modal</button>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
