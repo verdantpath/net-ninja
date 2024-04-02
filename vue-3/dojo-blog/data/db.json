@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "welcome to the new blog",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "tags": [
@@ -11,13 +11,22 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "top 5 CSS tips",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "tags": [
         "css",
         "webdev",
         "coding"
+      ]
+    },
+    {
+      "id": "242d",
+      "title": "zzz",
+      "body": "zzz",
+      "tags": [
+        "zzz",
+        ""
       ]
     }
   ]
