@@ -15,7 +15,7 @@
   padding: 2rem;
 
   font-weight: normal;
-  text-align: center;
+
 }
 
 
