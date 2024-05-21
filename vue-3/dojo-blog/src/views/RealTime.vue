@@ -1,5 +1,5 @@
 <template>
-  <h1>Real-time data</h1>
+  <h1>Real-time data here</h1>
 </template>
 <script>
 import { ref } from 'vue';
