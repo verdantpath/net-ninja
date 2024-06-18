@@ -4,7 +4,7 @@ import Chatroom from '../views/Chatroom.vue'
 import { projectAuth } from '../firebase/config'
 
 // auth guard
-const requireAuth = (t9, from, next) => {
+const requireAuth = (to, from, next) => {
   let user = projectAuth.currentUser
   console.log('current user in auth guard: ', user.displayName, user)
   if (!user) {
