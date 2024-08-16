@@ -4,6 +4,13 @@ import Login from '../views/auth/Login.vue'
 import Signup from '../views/auth/Signup.vue'
 import CreatePlaylist from '../views/playlists/CreatePlaylist.vue'
 
+// route guard
+import { projectAuth } from '../firebase/config';
+
+const requireAuth = (to,from,next) => {
+  
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
