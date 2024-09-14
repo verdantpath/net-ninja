@@ -48,6 +48,12 @@ const router = createRouter({
       component: PlaylistDetails,
       beforeEnter: requireAuth,
       props: true
+    },
+    {
+      path: '/playlists/user',
+      name: 'UserPlaylists', 
+      component: UserPlaylist,
+      beforeEnter: requireAuth
     }
   ]
 })
