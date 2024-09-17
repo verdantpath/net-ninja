@@ -4,7 +4,16 @@
   </div>
 </template>
 <script>
+import getUser from '@/composables/getUser'
+import getCollection from '@/composables/getCollection'
   export default {
+    setup() {
+      const {user} = getUser()
+      const { documents: playlists } = getCollection('playlists', ['userId', '==', user.value.uid])
+      // const { documents: playlists } = getCollection('playlists')
+      console.log('playlists:', playlists)
+      return { playlists }
+    }
     
   }
 </script>
