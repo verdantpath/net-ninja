@@ -21,7 +21,7 @@ const getCollection = (collection, query) => {
         doc.data().createdAt && results.push({ ...doc.data(), id: doc.id })
       })
       documents.value = results
-      console.log('results:', results);
+      // console.log('results:', results);
       error.value = null
     }, (err) => {
       console.log(err.message)
