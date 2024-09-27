@@ -32,7 +32,7 @@ import { useRouter } from 'vue-router'
 
       const handleSubmit = async () => {
         await logout()
-        console.log('user logged out: ', user)
+        // console.log('user logged out: ', user)
         router.push({name: 'Login'})
       }
 
