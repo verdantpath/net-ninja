@@ -13,7 +13,7 @@ const getCollection = (collection, query) => {
     }
 
     const unsub = collectionRef.onSnapshot((snap) => {
-      console.log('snapshot taken')
+      // console.log('snapshot taken')
       let results = []
       console.log('snap.docs:', snap.docs)
       snap.docs.forEach((doc) => {
