@@ -29,7 +29,7 @@ const useDocument = (collection, id) => {
       isPending.value = false
       return res
     } catch(err) {
-      console.log(err.message)
+      // console.log(err.message)
       isPending.value = false
       error.value = 'could not update the document'
     }
