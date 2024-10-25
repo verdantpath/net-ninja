@@ -20,4 +20,4 @@ const useLogout = () => {
   return { logout, error, isPending }
 }
 
-export default useLogout 
+export default useLogout
