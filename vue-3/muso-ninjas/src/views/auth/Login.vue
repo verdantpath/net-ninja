@@ -24,7 +24,7 @@ import { ref } from "vue";
         const res = await login(email.value, password.value)
         router.push({ name: 'UserPlaylists' })
         if(!error.value) {
-          console.log('user logged in') 
+          // console.log('user logged in') 
         }
       }
 
