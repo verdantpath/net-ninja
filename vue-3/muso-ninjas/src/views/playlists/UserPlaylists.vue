@@ -17,7 +17,7 @@ import ListView from '@/components/ListView.vue'
       const {user} = getUser()
       const { documents: playlists } = getCollection('playlists', ['userId', '==', user.value.uid])
       // const { documents: playlists } = getCollection('playlists')
-      console.log('playlists:', playlists)
+      // console.log('playlists:', playlists)
       return { playlists }
     }
     
