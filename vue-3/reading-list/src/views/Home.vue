@@ -3,10 +3,10 @@
     <ul>
       <li v-for="book in books" :key="book.id">
         <div class="details">
-          <h3>{{ book.title }}</h3>
+          <h3 @click="handleDelete(book)">{{ book.title }}</h3>
           <p>By {{ book.author }}</p>
         </div>
-        <div class="icon">
+        <div class="icon" :class="{ fav: book.isFav }" @click="handleUpdate(book)">
           <span class="material-icons">favorite</span>
         </div>
       </li>
@@ -20,6 +20,8 @@ import CreateBookForm from '@/components/CreateBookForm'
 import getCollection from '@/composables/getCollection'
 
 // firebase imports
+import { db } from '../firebase/config'
+import { doc, deleteDoc, updateDoc } from 'firebase/firestore'
 
 export default {
   name: 'Home',
@@ -27,11 +29,20 @@ export default {
   setup() {
     const { documents: books } = getCollection('books')
 
-    
+    const handleDelete = (book) => {
+      const docRef = doc(db, 'books', book.id)
+      deleteDoc(docRef) 
+    }
 
-    
+    const handleUpdate = (book) => {
+      const docRef = doc(db, 'books', book.id)
 
-    return { books }
+      updateDoc(docRef, {
+        isFav: !book.isFav
+      })
+    }    
+
+    return { books, handleDelete, handleUpdate }
   }
 }
 </script>
@@ -65,5 +76,8 @@ export default {
 .icon {
   color: #bbbbbb;
   cursor: pointer;
+}
+.icon.fav {
+  color: #f83f5e;
 }
 </style>
