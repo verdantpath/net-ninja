@@ -14,11 +14,15 @@
 
 <script>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import useSignup from '../composables/useSignup'
 
 export default {
   setup() {
     const email = ref('')
     const password = ref('')
+
+    const { signup, error } = useSignup()
 
     const handleSubmit = async () => {
       console.log(email.value, password.value)
