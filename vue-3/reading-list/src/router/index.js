@@ -12,7 +12,7 @@ const requireAuth = (to, from, next) => {
   let user = auth.currentUser
   if (!user) {
     // redirect them
-    next({})
+    next({ name: 'Login' })
   } else {
     next()
   }
