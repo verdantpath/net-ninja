@@ -8,8 +8,8 @@ import { onAuthStateChanged } from 'firebase/auth'
 const user = ref(auth.currentUser)
 
 // auth changes
-onAuthStateChanged(auth, (_user) => {
-  console.log('User state changed. Current user is: ', _user.email)
+onAuthStateChanged(auth, _user => {
+  console.log('User state change. Current user is:', _user)
   user.value = _user
 })
 
