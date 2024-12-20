@@ -11,7 +11,7 @@ const getCollection = (c, q) => {
   let colRef = collection(db, c)
 
   if (q) {
-    // console.log(...q)
+    console.log(...q)
     colRef = query(colRef, where(...q))
   }
 
